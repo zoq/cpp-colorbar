@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from PIL import Image 
 
 def colorbar(values, colors, filename='output.png', width=3, height=10):
-  plt.rcParams["figure.figsize"] = (width, height)
+  plt.rcParams["figure.figsize"] = (3, 10)
   plt.rcParams["savefig.pad_inches"] = 0 
   
   values = values.split(';')
