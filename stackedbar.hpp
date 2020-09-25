@@ -32,11 +32,11 @@ int StackedBar(const std::string& values,
         {
             pArgs = PyTuple_New(5);
 
-            PyObject* pValueWords = PyUnicode_FromString(values.c_str());
-            PyTuple_SetItem(pArgs, 0, pValueWords);
+            PyObject* pValueValues = PyUnicode_FromString(values.c_str());
+            PyTuple_SetItem(pArgs, 0, pValueValues);
 
-            PyObject* pValueWords = PyUnicode_FromString(colors.c_str());
-            PyTuple_SetItem(pArgs, 1, pValueWords);
+            PyObject* pValueColors= PyUnicode_FromString(colors.c_str());
+            PyTuple_SetItem(pArgs, 1, pValueColors);
 
             PyObject* pValueFilename = PyUnicode_FromString(filename.c_str());
             PyTuple_SetItem(pArgs, 2, pValueFilename);
