@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image 
 
-def colorbar(values, colors, filename='output.png', height=10, width=3):
+def colorbar(values, colors, filename='output.png', width=3, height=10):
   plt.rcParams["figure.figsize"] = (width, height)
   plt.rcParams["savefig.pad_inches"] = 0 
   
