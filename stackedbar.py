@@ -8,7 +8,13 @@ def colorbar(values, colors, filename='output.png', height=10, width=3):
   
   values = values.split(';')
   colors = colors.split(';')
-  
+
+  if len(values[-1]) == 0:
+    values = values[0:-1]
+
+  if len(colors[-1]) == 0:
+    colors = colors[0:-1]
+
   v = 0
   i = 0
   for value in values:
@@ -26,7 +32,3 @@ def colorbar(values, colors, filename='output.png', height=10, width=3):
   im = Image.open(filename)
   im2 = im.rotate(270, expand=True)
   im2.save(filename)
-
-values = '10;20;40;100';
-colors = '255;123;1;1;1;1;4;4;4;255;0;0'
-colorbar(values, colors)
